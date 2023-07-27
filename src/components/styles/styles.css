@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    width: 90vw;
+    height: 80vh;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+.wrapper {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.custom-textArea {
+    font-size: 10px;
+    font-family: inherit;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: #212121;
+
+}
+
+.custom-textArea:focus {
+    color: rgb(0, 255, 255);
+    background-color: #212121;
+    outline-color: rgb(0, 255, 255);
+    box-shadow: -3px -3px 15px rgb(0, 255, 255);
+    transition: .1s;
+    transition-property: box-shadow;
+}
+.glow-header {
+    color: coral;
+    text-align: center;
+}
+@keyframes glowing {
+    0% {
+        background-color: #60a5fa;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.glow-text {
+    animation: glowing  3s ease-out;
+    color: white;
+}
