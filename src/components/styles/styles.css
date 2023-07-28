@@ -45,4 +45,22 @@
 .glow-text {
     animation: glowing  3s ease-out;
     color: white;
+    padding: 2px;
+}
+
+.card {
+    display: inline-block;
+    margin: 5px;
+    padding: 2px;
+    border: 1px solid white;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+.Card-Box {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 18px;
+    justify-content: center;
 }

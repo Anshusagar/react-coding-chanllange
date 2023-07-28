@@ -4,7 +4,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Layout from './components/Layout'
 import Homepage from './components/Homepage'
 import GlowingText from './components/GlowingText.tsx'
-import Contact from './components/Contact'
+import CardGame from './components/CardGame.tsx'
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route index element={<Homepage/>}></Route>
-          <Route path='contact' element={<Contact/>}></Route>
+          <Route path='card' element={<CardGame/>}></Route>
           <Route path='glow' element={<GlowingText/>}></Route>
           <Route path='*' element={<>ERROR</>}></Route>
         </Route>

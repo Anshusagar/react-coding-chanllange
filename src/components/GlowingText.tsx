@@ -2,13 +2,13 @@ import './styles/styles.css'
 import {useState} from "react";
 
 const GlowingText = () => {
-    const [enteredText, setEnterredText] = useState<string>('');
+    const [enteredText, setEnteredText] = useState<string>('');
     const [finalDisplayedText, setFinalDisplayedText] = useState<any>([])
     const handleKeyUp = (event: any) => {
         //console.log(event)
         if (event.key == "Enter") {
-            setFinalDisplayedText([...finalDisplayedText, enteredText])
-            setEnterredText('')
+            setFinalDisplayedText([...finalDisplayedText, enteredText+" "])
+            setEnteredText('')
         }
     }
     return (
@@ -18,8 +18,8 @@ const GlowingText = () => {
                     <textarea placeholder="Enter your Text Here ............"
                               className="custom-textArea" rows={30} cols={70}
                               value={enteredText}
-                              onKeyUpCapture={handleKeyUp}
-                              onChange={(event) => setEnterredText(event?.target.value)}>
+                              onKeyUp={handleKeyUp}
+                              onChange={(event) => setEnteredText(event?.target.value)}>
 
                     </textarea>
                 </div>
